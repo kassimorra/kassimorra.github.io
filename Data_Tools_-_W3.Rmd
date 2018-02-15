@@ -1,0 +1,22 @@
+---
+title: "Data Tools - W3"
+author: "Kassim"
+date: "14/02/2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(plotly)
+
+x <- c(1:100)
+random_y <- rnorm(100, mean = 5)
+data <- data.frame(x, random_y)
+
+
+```
+##Plotly Demo Chart from plotly.js
+```{r}
+plot_ly(data, x = ~x, y = ~random_y, type = 'scatter', mode = 'lines')
+```
+
